@@ -46,11 +46,19 @@ namespace CreatingTextFile
                 "Contact No.: " + SetContactNo
             };
 
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string FileDirectory = Path.Combine(docPath, SetFileName + ".txt");
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FrmRegistration.SetFileName)))
-            {
 
+            string docPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\CreatedFiles");
+
+            string fullPath = Path.GetFullPath(docPath);
+
+            Directory.CreateDirectory(fullPath);
+
+            string FileDirectory = Path.Combine(docPath, SetFileName + ".txt");
+
+            //
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(fullPath, SetFileName)))
+            
                 try
                 {
                     if (File.Exists(FileDirectory))
@@ -67,8 +75,10 @@ namespace CreatingTextFile
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
+
+            MessageBox.Show("Registered Successfully");
         }
+        
 
         private void ClearBtn_Click(object sender, EventArgs e)
         {

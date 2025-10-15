@@ -1,0 +1,1 @@
+FileStream is a path wherein the data bytes are flowing and sent through. On the other hand, StreamWriter are the data bytes that were converted into characters that will be sent through the FileStream. Lastly, StreamReader converts the data bytes into readable characters that were retrieved from FileStream.

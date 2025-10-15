@@ -24,20 +24,27 @@ namespace CreatingTextFile
         {
             FrmRegistration frmRegistration = new FrmRegistration();
 
-            SetFileName = filenameTxt.Text + ".txt"; 
+            SetFileName = filenameTxt.Text + ".txt";
             string getInput = contentTxt.Text;
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string docPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\CreatedFiles");
 
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath,CreateFile.SetFileName)))
+            string fullPath = Path.GetFullPath(docPath);
+
+            Directory.CreateDirectory(fullPath);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(fullPath, SetFileName)))
             {
                 outputFile.WriteLine(getInput);
-                Console.WriteLine(getInput);
             }
+
 
             MessageBox.Show("File Created Successfully");
             frmRegistration.Show();
             this.Hide();
+
             //Close();
+            //used Hide instead of Close in order to proceed on the next form
+            //Close method forces the application to terminate
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
