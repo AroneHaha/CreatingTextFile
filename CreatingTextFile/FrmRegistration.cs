@@ -20,11 +20,6 @@ namespace CreatingTextFile
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             SetFileName = StudentNoTxt.Text + ".txt";
@@ -65,7 +60,7 @@ namespace CreatingTextFile
                     }
 
                     foreach (string line in Values)
-                        outputFile.WriteLine(line);
+                    outputFile.WriteLine(line);
 
                 }
                 catch (Exception ex)
@@ -73,6 +68,19 @@ namespace CreatingTextFile
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            StudentNoTxt.Clear();
+            ProgramCmb.SelectedIndex = -1;
+            LastNameTxt.Clear();
+            FirstNameTxt.Clear();
+            MiddleNameTxt.Clear();
+            AgeTxt.Clear();
+            GenderCmb.SelectedIndex = -1;
+            BirthdayPicker.Value = DateTime.Now;
+            ContactNoTxt.Clear();
         }
     }
 }

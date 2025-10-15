@@ -50,6 +50,7 @@
             this.GenderCmb = new System.Windows.Forms.ComboBox();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,10 +105,8 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.Location = new System.Drawing.Point(22, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 24);
+            this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Last Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AgeTxt
             // 
@@ -159,6 +158,10 @@
             // 
             this.ProgramCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ProgramCmb.FormattingEnabled = true;
+            this.ProgramCmb.Items.AddRange(new object[] {
+            "BSIT",
+            "BSCS",
+            "BSCPE"});
             this.ProgramCmb.Location = new System.Drawing.Point(465, 85);
             this.ProgramCmb.Name = "ProgramCmb";
             this.ProgramCmb.Size = new System.Drawing.Size(196, 28);
@@ -232,6 +235,9 @@
             // 
             this.GenderCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.GenderCmb.FormattingEnabled = true;
+            this.GenderCmb.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.GenderCmb.Location = new System.Drawing.Point(465, 180);
             this.GenderCmb.Name = "GenderCmb";
             this.GenderCmb.Size = new System.Drawing.Size(196, 28);
@@ -259,6 +265,17 @@
             this.ClearBtn.TabIndex = 26;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = false;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label11.Location = new System.Drawing.Point(22, 136);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 24);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Last Name";
             // 
             // FrmRegistration
             // 
@@ -266,6 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(745, 351);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.GenderCmb);
@@ -320,5 +338,6 @@
         private System.Windows.Forms.ComboBox GenderCmb;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Button ClearBtn;
+        private System.Windows.Forms.Label label11;
     }
 }

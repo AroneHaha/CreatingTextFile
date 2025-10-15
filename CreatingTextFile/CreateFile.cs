@@ -39,5 +39,11 @@ namespace CreatingTextFile
             this.Hide();
             //Close();
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            filenameTxt.Clear();
+            contentTxt.Clear();
+        }
     }
 }

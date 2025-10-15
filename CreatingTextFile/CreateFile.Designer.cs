@@ -118,6 +118,7 @@
             this.clearBtn.TabIndex = 7;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // CreateFile
             // 
