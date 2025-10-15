@@ -41,6 +41,7 @@
             // 
             // contentTxt
             // 
+            this.contentTxt.BackColor = System.Drawing.Color.White;
             this.contentTxt.Location = new System.Drawing.Point(12, 164);
             this.contentTxt.Name = "contentTxt";
             this.contentTxt.Size = new System.Drawing.Size(390, 409);
@@ -49,6 +50,7 @@
             // 
             // filenameTxt
             // 
+            this.filenameTxt.BackColor = System.Drawing.Color.White;
             this.filenameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.filenameTxt.Location = new System.Drawing.Point(12, 100);
             this.filenameTxt.Name = "filenameTxt";
