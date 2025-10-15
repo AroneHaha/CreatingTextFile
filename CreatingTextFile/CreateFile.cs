@@ -22,8 +22,10 @@ namespace CreatingTextFile
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            string getInput = contentTxt.Text;
+            FrmRegistration frmRegistration = new FrmRegistration();
+            ShowDialog();
 
+            string getInput = contentTxt.Text;
         }
     }
 }
