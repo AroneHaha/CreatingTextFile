@@ -22,10 +22,18 @@ namespace CreatingTextFile
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            FrmRegistration frmRegistration = new FrmRegistration();
-            ShowDialog();
-
+            SetFileName = haha.Text + ".txt"; 
             string getInput = contentTxt.Text;
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath,CreateFile.SetFileName)))
+            {
+                outputFile.WriteLine(getInput);
+                Console.WriteLine(getInput);
+            }
+
+            MessageBox.Show("File Created Successfully");
+            Close();
         }
     }
 }
