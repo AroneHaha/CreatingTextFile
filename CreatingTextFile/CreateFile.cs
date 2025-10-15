@@ -22,7 +22,9 @@ namespace CreatingTextFile
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            SetFileName = haha.Text + ".txt"; 
+            FrmRegistration frmRegistration = new FrmRegistration();
+
+            SetFileName = filenameTxt.Text + ".txt"; 
             string getInput = contentTxt.Text;
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
@@ -33,7 +35,9 @@ namespace CreatingTextFile
             }
 
             MessageBox.Show("File Created Successfully");
-            Close();
+            frmRegistration.Show();
+            this.Hide();
+            //Close();
         }
     }
 }

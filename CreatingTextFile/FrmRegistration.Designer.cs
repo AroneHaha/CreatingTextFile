@@ -241,18 +241,19 @@
             // 
             this.RegisterBtn.BackColor = System.Drawing.Color.ForestGreen;
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Location = new System.Drawing.Point(356, 301);
+            this.RegisterBtn.Location = new System.Drawing.Point(367, 301);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(141, 38);
             this.RegisterBtn.TabIndex = 25;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = false;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // ClearBtn
             // 
             this.ClearBtn.BackColor = System.Drawing.Color.Red;
             this.ClearBtn.ForeColor = System.Drawing.Color.White;
-            this.ClearBtn.Location = new System.Drawing.Point(209, 301);
+            this.ClearBtn.Location = new System.Drawing.Point(220, 301);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(141, 38);
             this.ClearBtn.TabIndex = 26;
