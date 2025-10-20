@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.createBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.OpenFileBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,12 +121,23 @@
             this.clearBtn.UseVisualStyleBackColor = false;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
+            // OpenFileBtn
+            // 
+            this.OpenFileBtn.Location = new System.Drawing.Point(283, 138);
+            this.OpenFileBtn.Name = "OpenFileBtn";
+            this.OpenFileBtn.Size = new System.Drawing.Size(121, 23);
+            this.OpenFileBtn.TabIndex = 8;
+            this.OpenFileBtn.Text = "Open File";
+            this.OpenFileBtn.UseVisualStyleBackColor = true;
+            this.OpenFileBtn.Click += new System.EventHandler(this.OpenFileBtn_Click);
+            // 
             // CreateFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(414, 629);
+            this.Controls.Add(this.OpenFileBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.panel1);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button OpenFileBtn;
     }
 }
 

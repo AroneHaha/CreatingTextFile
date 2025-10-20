@@ -52,5 +52,11 @@ namespace CreatingTextFile
             filenameTxt.Clear();
             contentTxt.Clear();
         }
+
+        private void OpenFileBtn_Click(object sender, EventArgs e)
+        {
+            OpenTextFile OpenTextFile = new OpenTextFile();
+            OpenTextFile.ShowDialog();
+        }
     }
 }
